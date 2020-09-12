@@ -124,11 +124,11 @@ hr {
   height: calc(100vh - 2em);
   padding: 1em;
   overflow-y: scroll;
-  background-color: white;
+  background-color: #e0e0e0;
 }
 
-.medium:nth-child(odd) {
-  background-color: #e0e0e0;
+#codex, #website {
+  background-color: white;
 }
 
 .medium-intro {
@@ -138,6 +138,18 @@ hr {
 
 .medium-article {
   text-indent: 2rem;
+}
+
+.handle {
+  width: 0.5em;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  cursor: col-resize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
 }
 
 table {
