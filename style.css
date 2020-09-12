@@ -1,0 +1,196 @@
+/* NORMALIZE */
+*, html {
+  padding: 0;
+  margin: 0;
+}
+
+/* FONTS */
+@font-face {
+  font-family: "Suisse Works";
+  src: url("src/SuisseWorks-Regular-WebXL.woff2") format("woff2"),
+       url("src/SuisseWorks-Regular-WebXL.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Suisse Works";
+  src: url("src/SuisseWorks-RegularItalic-WebXL.woff2") format("woff2"),
+       url("src/SuisseWorks-RegularItalic-WebXL.woff") format("woff");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Suisse Int'l";
+  src: url("src/SuisseIntl-Regular-WebM.woff2") format("woff2"),
+       url("src/SuisseIntl-Regular-WebM.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Suisse Int'l";
+  src: url("src/SuisseIntl-RegularItalic-WebM.woff2") format("woff2"),
+       url("src/SuisseIntl-RegularItalic-WebM.woff") format("woff");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Suisse Mono";
+  src: url("src/SuisseIntlMono-Regular-WebS.woff2") format("woff2"),
+       url("src/SuisseIntlMono-Regular-WebS.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Suisse Mono";
+  src: url("SuisseIntlMono-Bold-WebS.woff2") format("woff2"),
+       url("src/SuisseIntlMono-Bold-WebS.woff") format("woff");
+  font-style: bold;
+}
+
+/* SECTIONS */
+body {
+  font-family: "Suisse Works", serif;
+}
+
+p {
+}
+
+img {
+  width: 100%;
+  margin: 0.5em 0;
+}
+
+hr {
+	height:1px;
+	border:none;
+  color: black;
+  background: black;
+}
+
+.title {
+  font-family: "Suisse Int'l", sans-serif;
+  font-size: 1.3em;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid black;
+}
+
+.caption {
+  font-family: "Suisse Mono", monospace;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-indent: 0;
+  font-size: 0.7em;
+  margin-bottom: 1em;
+}
+
+#intro {
+  height: 100vh;
+  width: 100vw;
+  background-color: lemonchiffon;
+  z-index: 10; /* why doesn't this hide the shadow? */
+}
+
+#intro * {
+  padding: 1rem;
+}
+
+#intro h1 {
+  font-size: 10vw;
+  line-height: 0.9;
+  letter-spacing: -0.3rem;
+}
+
+#intro p {
+  font-family: "Suisse Int'l", sans-serif;
+  font-size: 2em;
+  margin-left: 30vw;
+  text-indent: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+#hint {
+  margin-left: 0 !important;
+}
+
+#wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.medium {
+  width: 20%;
+  height: calc(100vh - 2em);
+  padding: 1em;
+  overflow-y: scroll;
+  background-color: white;
+}
+
+.medium:nth-child(odd) {
+  background-color: #e0e0e0;
+}
+
+.medium-intro {
+  margin: 1rem 0 1rem 2rem;
+  font-style: italic;
+}
+
+.medium-article {
+  text-indent: 2rem;
+}
+
+table {
+  font-family: "Suisse Mono", monospace;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  width: calc(100% - 2rem);
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+td:first-child {
+  font-weight: bold;
+}
+
+td:last-child {
+  color: grey;
+}
+
+table td, table td * {
+    vertical-align: top;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+/* #scroll {
+  background-color: whitesmoke;
+  color: red;
+}
+
+#codex {
+  background-color: violet;
+  color: indigo;
+}
+
+#webpage {
+  background-color: gold;
+  color: crimson;
+}
+
+#website {
+  background-color: lightskyblue;
+  color: blue;
+}
+
+#feed {
+  background-color: greenyellow;
+  color: green;
+} */
+
+::selection {
+  background-color: rgba(0, 0, 0, 0.99);
+  color: white;
+}
