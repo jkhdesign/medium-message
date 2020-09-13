@@ -49,6 +49,7 @@
 
 /* SECTIONS */
 body {
+  background-color: black;
   font-family: "Suisse Works", serif;
 }
 
@@ -75,15 +76,6 @@ hr {
   border-top: 2px solid black;
 }
 
-.caption {
-  font-family: "Suisse Mono", monospace;
-  font-weight: normal;
-  text-transform: uppercase;
-  text-indent: 0;
-  font-size: 0.7em;
-  margin-bottom: 1em;
-}
-
 #intro {
   height: 100vh;
   width: 100vw;
@@ -91,7 +83,7 @@ hr {
   z-index: 10; /* why doesn't this hide the shadow? */
 }
 
-#intro * {
+#intro h1, #intro p {
   padding: 1rem;
 }
 
@@ -110,8 +102,23 @@ hr {
   bottom: 0;
 }
 
+#byline {
+  font-size: 1rem;
+}
+
 #hint {
   margin-left: 0 !important;
+  font-size: 2em !important;
+  animation: bob 2s ease infinite;
+}
+
+@keyframes bob {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 1rem;
+  }
 }
 
 #wrapper {
@@ -132,12 +139,21 @@ hr {
 }
 
 .medium-intro {
-  margin: 1rem 0 1rem 2rem;
+  margin: 1rem 0 0.5rem 2rem;
   font-style: italic;
 }
 
 .medium-article {
   text-indent: 2rem;
+}
+
+.caption {
+  font-family: "Suisse Mono", monospace;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-indent: 0;
+  font-size: 0.7em;
+  margin-bottom: 1em;
 }
 
 .handle {
@@ -176,31 +192,6 @@ table td, table td * {
 h1 {
   font-weight: normal;
 }
-
-/* #scroll {
-  background-color: whitesmoke;
-  color: red;
-}
-
-#codex {
-  background-color: violet;
-  color: indigo;
-}
-
-#webpage {
-  background-color: gold;
-  color: crimson;
-}
-
-#website {
-  background-color: lightskyblue;
-  color: blue;
-}
-
-#feed {
-  background-color: greenyellow;
-  color: green;
-} */
 
 ::selection {
   background-color: rgba(0, 0, 0, 0.99);
