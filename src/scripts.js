@@ -1,29 +1,37 @@
-let theHandleWeAreCurrentlyResizing = null;
-let theHorizontalCoordinateOfTheMouseWhenAHandleIsClicked = null;
-let theCurrentHorizontalCoordinateOfTheMouse = null;
+let currentHandle = null;
+let mouseStartX = null;
+let mouseX = null;
 
 let columns = document.querySelectorAll(".medium");
-let everyHandleElementOnThePage = document.querySelectorAll(".handle");
-let iFrames = document.querySelectorAll("iframe");
+let handles = document.querySelectorAll(".handle");
+let iframes = document.querySelectorAll("iframe");
 
-everyHandleElementOnThePage.forEach(handle => {
+handles.forEach(handle => {
   handle.onmousedown = event => {
-    theHandleWeAreCurrentlyResizing = event.target;
-    theHorizontalCoordinateOfTheMouseWhenAHandleIsClicked = event.clientX;
+    currentHandle = event.target;
+    mouseStartX = event.clientX;
+	iframes.forEach(iframe => iframe.style = "pointer-events: none");
   };
 });
 
-document.onmouseup = event => theHandleWeAreCurrentlyResizing = null;
-document.onmousemove = event => theCurrentHorizontalCoordinateOfTheMouse = event.clientX;
+document.onmouseup = event => {
+	currentHandle = null;
+	iframes.forEach(iframe => iframe.style = "pointer-events: all");
+};
+document.onmousemove = event => mouseX = event.clientX;
 
 function update() {
-  if(theHandleWeAreCurrentlyResizing !== null) {
+  if(currentHandle !== null) {
+	
     // we are holding a handle, resize the columns
-    let theIndexOfTheHandleElementThatWeAreCurrentlyResizing = [].indexOf.call(everyHandleElementOnThePage, theHandleWeAreCurrentlyResizing);
-    let columnWeAreGoingToExpand = columns[theIndexOfTheHandleElementThatWeAreCurrentlyResizing];
-    let columnWeAreGoingToShrink = columns[theIndexOfTheHandleElementThatWeAreCurrentlyResizing + 1];
-    columnWeAreGoingToExpand.style = "width: calc(20% + " + (theCurrentHorizontalCoordinateOfTheMouse - theHorizontalCoordinateOfTheMouseWhenAHandleIsClicked) + "px)";
-    columnWeAreGoingToShrink.style = "width: calc(20% - " + (theCurrentHorizontalCoordinateOfTheMouse - theHorizontalCoordinateOfTheMouseWhenAHandleIsClicked) + "px)";
+    let handleIndex = [].indexOf.call(handles, currentHandle);
+    let expandingColumn = columns[handleIndex];
+    let shrinkingColumn = columns[handleIndex + 1];
+	
+    expandingColumn.style = `width: calc(20% + ${mouseX - mouseStartX }px)`;
+	shrinkingColumn.style = `width: calc(20% - ${mouseX - mouseStartX}px)`;
+	
+	console.log(shrinkingColumn.lastWidth);
   }
   requestAnimationFrame(update); // calls update() once per frame (preferred over setInterval for browser optimisation when in background)
 }
