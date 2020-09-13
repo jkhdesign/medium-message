@@ -140,8 +140,7 @@ a {
 .medium {
   width: 20%;
   min-width: 12%;
-  height: calc(100vh - 2em);
-  overflow: hidden;
+  height: 100vh;
   background-color: #e0e0e0;
   position: relative;
 }
@@ -244,11 +243,12 @@ h1 {
 
 iframe {
   width: 100%;
-  height: calc(100vh - 2em);
+  height: 100%;
   border: none;
+  /* pointer-events: none; */
 }
 
-/* @media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 300px) {
   p {
     font-size: 0.8em;
   }
@@ -257,14 +257,14 @@ iframe {
     font-size: 0.5em;
   }
 
-  #intro p, h1 {
+ h1 {
     font-size: 1.5em;
   }
 
   .title {
     font-size: 1em;
   }
-} */
+}
 
 @media only screen and (max-width: 1000px) {
   #no-mobile {

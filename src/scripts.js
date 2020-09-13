@@ -4,6 +4,7 @@ let theCurrentHorizontalCoordinateOfTheMouse = null;
 
 let columns = document.querySelectorAll(".medium");
 let everyHandleElementOnThePage = document.querySelectorAll(".handle");
+let iFrames = document.querySelectorAll("iframe");
 
 everyHandleElementOnThePage.forEach(handle => {
   handle.onmousedown = event => {
