@@ -6,23 +6,45 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Medium is the message</title>
   <link rel="stylesheet" href="../src/style.css" type="text/css">
+  <style>
+  #code {
+    font-family: "Suisse Mono", monospace;
+    font-style: normal;
+    font-size: 0.8em;
+    letter-spacing: -0.4px;
+    text-indent: 0;
+    margin-bottom: 1em;
+  }
+
+  #code::before {
+    content: "> ";
+    font-weight: bold;
+  }
+  </style>
 </head>
 
-<body style="padding: 1em">
-  <h1 class="medium-title">Webpage</h1>
-  <p class="medium-intro">In their most basic form, webpages are <span class="similar" >Scrolls</span> without physicality. Their behavior is identical in that  information is displayed in a continuous flow. One critical difference, however, is its ability to show dynamic and updating information, like <span class="similar">Websites</span> and <span class="similar">Feeds</span>.</p>
-  <table>
-    <tr>
-      <td>Length</td>
-      <td>Variable</td>
-    </tr>
-    <tr>
-      <td>Experience</td>
-      <td>Linear, Continuous</td>
-    </tr>
-    <tr>
-      <td>Realm</td>
-      <td>Digital</td>
-    </tr>
-  </table>
+<body style="padding: 1em; overflow-y: hidden">
+  <div class="medium-info">
+    <h1 class="medium-title">Webpage</h1>
+    <p class="medium-intro">In their most basic form, plain-text, webpages are <span class="similar" >Scrolls</span> without physicality. Like them, information is displayed in a continuous flow. One critical difference, however, is its ability to show dynamic and updating information, like <span class="similar">Websites</span> and <span class="similar">Feeds</span>.</p>
+    <table>
+      <tr>
+        <td>Length</td>
+        <td>Variable</td>
+      </tr>
+      <tr>
+        <td>Experience</td>
+        <td>Linear, Continuous</td>
+      </tr>
+      <tr>
+        <td>Realm</td>
+        <td>Physical, Digital</td>
+      </tr>
+    </table>
+  </div>
+  <div class="medium-article">
+    <p class="article-title">Title of piece</p>
+    <p id="code">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor. Est placerat in egestas erat imperdiet sed. Ut diam quam nulla porttitor. Arcu bibendum at varius vel pharetra vel. Placerat orci nulla pellentesque dignissim enim. Et malesuada fames ac turpis egestas maecenas pharetra convallis. Platea dictumst quisque sagittis purus. Gravida neque convallis a cras.</p>
+    <p id="code">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor. Est placerat in egestas erat imperdiet sed. Ut diam quam nulla porttitor. Arcu bibendum at varius vel pharetra vel. Placerat orci nulla pellentesque dignissim enim. Et malesuada fames ac turpis egestas maecenas pharetra convallis. Platea dictumst quisque sagittis purus. Gravida neque convallis a cras.</p>
+  </div>
 </body>

@@ -9,26 +9,27 @@
 </head>
 
 <body style="padding: 1em; overflow-y: hidden">
-  <h1 class="medium-title">Website</h1>
-  <p class="medium-intro">Websites consist of multiple <span class="similar">Webpages</span> linked together. Like a <span class="similar">Feed</span>content isn't consumed linearly like with the other selected mediums.</p>
-  <table>
-    <tr>
-      <td>Length</td>
-      <td>Variable</td>
-    </tr>
-    <tr>
-      <td>Experience</td>
-      <td>Non-linear, Segmented</td>
-    </tr>
-    <tr>
-      <td>Realm</td>
-      <td>Digital</td>
-    </tr>
-  </table>
+  <div class="medium-info">
+    <h1 class="medium-title">Website</h1>
+    <p class="medium-intro">Websites consist of multiple <span class="similar">Webpages</span> linked together. Like a <span class="similar">Feed</span>content isn't consumed linearly like with the other selected mediums.</p>
+    <table>
+      <tr>
+        <td>Length</td>
+        <td>Variable</td>
+      </tr>
+      <tr>
+        <td>Experience</td>
+        <td>Non-linear, Segmented</td>
+      </tr>
+      <tr>
+        <td>Realm</td>
+        <td>Physical, Digital</td>
+      </tr>
+    </table>
+  </div>
   <div class="medium-article">
-  <div class="top-gradient-container"><div class="top-gradient"></div></div>
-  <p class="title">My website is a shifting house next to a river of knowledge. What could yours be?<br>
-    <p class="caption">by Laurel Schwulst</p>
+  <p class="article-title">My website is a shifting house next to a river of knowledge. What could yours be?<br>
+    <p class="caption">by Laurel Schwulst, <a href="https://thecreativeindependent.com/people/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/" target="_blank">The Creative Independent</a></p>
   <hr />
   <img src="http://tci-assets.s3.amazonaws.com/uploads/laurel-schwulst-cloud.png" />
 
@@ -49,19 +50,5 @@
   <p>But my students already know this! So when they ask me about actually making a website, they are referring to a website in the world &#8230; today.</p>
 
   <p>It&rsquo;s healthy to acknowledge today&rsquo;s web is much different than the web many of us grew up using. So when they ask how to make a website (despite having already &ldquo;learned&rdquo;), they are alluding to the technological friction and social pressures that often come along with creating and maintaining a website in 2018.</p>
-  <div class="bottom-gradient-container"><div class="bottom-gradient"></div></div>
 </div>
-<script>
-  let mediumArticle = document.querySelector(".medium-article");
-  
-  mediumArticle.onscroll = event => {
-    let scrollTop = mediumArticle.scrollTop > 250 ? 250 : mediumArticle.scrollTop;
-	document.querySelector(".top-gradient").style.height = scrollTop + "px";
-	
-	let scrollBottom = parseInt(getComputedStyle(mediumArticle).height + 1) - mediumArticle.scrollTop;
-	scrollBottom = scrollBottom > 250 ? 250 : scrollBottom;
-	scrollBottom = scrollBottom < 0 ? 0 : scrollBottom;
-	document.querySelector(".bottom-gradient").style.height = scrollBottom + "px";
-  };
-</script>
 </body>

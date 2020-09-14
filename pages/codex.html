@@ -6,23 +6,41 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Medium is the message</title>
   <link rel="stylesheet" href="../src/style.css" type="text/css">
+  <style>
+    #book-content, #book-pg {
+      font-size: 1.3em;
+    }
+    #book-pg {
+      text-align: center;
+      margin-top: 2em;
+      text-indent: 0;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
-<body style="padding: 1em">
-  <h1 class="medium-title">Codex</h1>
-  <p class="medium-intro">The Codex (commonly referred to as the book) takes information and segments it into multiple linked pages, much like the <span class="similar">Website</span> medium. Like the <span class="similar">Scroll</span> its content is static and limited only to text and image.</p>
-  <table>
-    <tr>
-      <td>Length</td>
-      <td>Finite</td>
-    </tr>
-    <tr>
-      <td>Experience</td>
-      <td>Linear, Segmented</td>
-    </tr>
-    <tr>
-      <td>Realm</td>
-      <td>Physical</td>
-    </tr>
-  </table>
+<body style="padding: 1em; overflow-y: hidden">
+  <div class="medium-info">
+    <h1 class="medium-title">Codex</h1>
+    <p class="medium-intro">The Codex (commonly referred to as the book) takes information and segments it into multiple linked pages, much like the <span class="similar">Website</span> medium. Like the <span class="similar">Scroll</span> its content is static and limited only to text and image.</p>
+    <table>
+      <tr>
+        <td>Length</td>
+        <td>Finite</td>
+      </tr>
+      <tr>
+        <td>Experience</td>
+        <td>Linear, Segmented</td>
+      </tr>
+      <tr>
+        <td>Realm</td>
+        <td>Physical</td>
+      </tr>
+    </table>
+  </div>
+  <div class="medium-article">
+    <p class="article-title">Title of piece</p>
+    <p id="book-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor. Est placerat in egestas erat imperdiet sed. Ut diam quam nulla porttitor. Arcu bibendum at varius vel pharetra vel. Placerat orci nulla pellentesque dignissim enim. Et malesuada fames ac turpis egestas maecenas pharetra convallis. Platea dictumst quisque sagittis purus. Gravida neque convallis a cras.</p>
+    <p id="book-pg">&larr; 01 &rarr;</p>
+  </div>
 </body>

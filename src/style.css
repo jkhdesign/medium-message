@@ -35,9 +35,18 @@
 
 @font-face {
   font-family: "Suisse Mono";
+  src: url("fonts//SuisseIntlMono-Regular-WebS.woff2") format("woff2"),
+       url("fonts//SuisseIntlMono-Regular-WebS.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Suisse Mono";
   src: url("fonts//SuisseIntlMono-Bold-WebS.woff2") format("woff2"),
        url("fonts//SuisseIntlMono-Bold-WebS.woff") format("woff");
-  font-style: bold;
+  font-weight: bold;
+  font-style: normal;
 }
 
 /* SECTIONS */
@@ -64,6 +73,11 @@ a {
   font-family: "Suisse Int'l", sans-serif;
   color: black;
   cursor: ne-resize;
+  text-transform: none !important;
+}
+
+a:hover {
+  opacity: 0.5;
 }
 
 .similar {
@@ -79,56 +93,11 @@ a {
   color: black;
 }
 
-.title {
+.article-title {
   font-family: "Suisse Int'l", sans-serif;
   font-size: 1.3em;
   margin-bottom: 1rem;
   padding-top: 1rem;
-}
-
-#intro {
-  height: 100vh;
-  width: 100vw;
-  background-color: lemonchiffon;
-  z-index: 10; /* why doesn't this hide the shadow? */
-}
-
-#intro h1, #intro p {
-  padding: 1rem;
-}
-
-#intro h1 {
-  font-size: 10vw;
-  line-height: 0.9;
-  letter-spacing: -0.05em;
-}
-
-#intro p {
-  font-family: "Suisse Int'l", sans-serif;
-  font-size: 2em;
-  margin-left: 30vw;
-  text-indent: 0;
-  position: absolute;
-  bottom: 0;
-}
-
-#byline {
-  font-size: 1rem;
-}
-
-#hint {
-  margin-left: 0 !important;
-  font-size: 2em !important;
-  animation: bob 2s ease infinite;
-}
-
-@keyframes bob {
-  0%, 100% {
-    bottom: 0;
-  }
-  50% {
-    bottom: 1rem;
-  }
 }
 
 #wrapper {
@@ -138,10 +107,15 @@ a {
 
 .medium {
   width: 20%;
-  min-width: 12%;
+  min-width: 15%;
   height: 100vh;
   background-color: #e0e0e0;
   position: relative;
+  overflow-y: hidden;
+}
+
+.medium-info {
+  height: 30vh;
 }
 
 .medium-title {
@@ -165,7 +139,11 @@ a {
   text-indent: 2rem;
   position: relative;
   border-top: 2px solid black;
-  max-height: 60vh;
+  max-height: 70vh;
+}
+
+.medium-article *:last-child {
+  margin-bottom: 2em;
 }
 
 .top-gradient-container {
@@ -179,7 +157,7 @@ a {
   top: 0;
   width: 100%;
   height: 0;
-  background: linear-gradient(180deg, #e0e0e0 0%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0) 100%);
 }
 
 .bottom-gradient-container {
@@ -192,8 +170,8 @@ a {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 0;
-  background: linear-gradient(0, #e0e0e0 0%, rgba(255,255,255,0) 100%);
+  height: 250px;
+  background: linear-gradient(0, #fff 0%, rgba(255,255,255,0) 100%);
 }
 
 #scroll, #webpage, #feed .top-gradient {
@@ -202,7 +180,7 @@ a {
 
 .caption {
   font-family: "Suisse Mono", monospace;
-  font-weight: normal;
+  font-weight: bold;
   text-transform: uppercase;
   text-indent: 0;
   font-size: 0.7em;
@@ -223,6 +201,7 @@ a {
 
 table {
   font-family: "Suisse Mono", monospace;
+  font-weight: bold;
   font-size: 0.7em;
   text-transform: uppercase;
   width: calc(100% - 2rem);
@@ -230,12 +209,12 @@ table {
   margin-bottom: 2rem;
 }
 
-td:first-child {
-  font-weight: bold;
-}
-
 td:last-child {
   color: grey;
+}
+
+#example td {
+  padding-top: 1em;
 }
 
 table td, table td * {
@@ -283,7 +262,7 @@ iframe {
   border: none;
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 315px) {
   p {
     font-size: 0.8em;
   }
@@ -296,13 +275,17 @@ iframe {
     font-size: 1.5em;
   }
 
-  .title {
-    font-size: 1em;
+  .article-title, #book-content {
+    font-size: 1em !important;
   }
 }
 
 @media only screen and (max-width: 1000px) {
   #no-mobile {
     display: flex;
+  }
+
+  #intro, #wrapper {
+    display: none;
   }
 }
