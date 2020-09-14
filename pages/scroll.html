@@ -32,6 +32,7 @@
     </table>
   </div>
   <div class="medium-article">
+    <div class="article-container">
     <div class="top-gradient-container"><div class="top-gradient"></div></div>
     <p class="article-title">The papyrus scroll, (excerpt from <em>The Book</em>)</p>
     <p class="caption">by Amaranth Borsuk, <a href="http://www.amaranthborsuk.com/publications/the-book/" target="_blank">MIT Press</a></p>
@@ -56,15 +57,17 @@
     <p>While one might expect parchment to have quickly superseded its more fragile counterpart, scrolls of both kinds existed side by side for centuries, much as tablets and scrolls did. Some scholars attribute this parity to the difficulty of systematizing and scaling its production. Parchment and vellum, its highest-quality exemplar (typically of calfskin), were made by skinning an animal, removing the hair from its pelt, bathing the skin in lime, stretching and drying it slowly, then treating the surface to make it hard and smooth. In addition to requiring utmost care, the process necessitated the slaughter of great quantities of livestock, a costly prospect. Much as in our own technological moment, where print books and e-readers continue to be used despite staunch proclamations in favor of the portability, durability, and cost-effectiveness of one or the other, established systems of production and use take time and resources to change.</p>
     <div class="bottom-gradient-container"><div class="bottom-gradient"></div></div>
   </div>
+  </div>
 
 <script>
   let mediumArticle = document.querySelector(".medium-article");
+  let mediumArticleContainer = document.querySelector(".article-container");
 
   mediumArticle.onscroll = event => {
     let scrollTop = mediumArticle.scrollTop > 250 ? 250 : mediumArticle.scrollTop;
 	document.querySelector(".top-gradient").style.height = scrollTop + "px";
 
-	let scrollBottom = parseInt(getComputedStyle(mediumArticle).height + 1) - mediumArticle.scrollTop;
+	let scrollBottom = parseInt(getComputedStyle(mediumArticleContainer).height + 1) - mediumArticle.scrollTop - parseInt(getComputedStyle(mediumArticle).height);
 	scrollBottom = scrollBottom > 250 ? 250 : scrollBottom;
 	scrollBottom = scrollBottom < 0 ? 0 : scrollBottom;
 	document.querySelector(".bottom-gradient").style.height = scrollBottom + "px";
