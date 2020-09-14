@@ -142,7 +142,7 @@ a:hover {
   max-height: 70vh;
 }
 
-.medium-article *:last-child {
+.article-container *:nth-last-child(2) {
   margin-bottom: 2em;
 }
 
@@ -172,10 +172,6 @@ a:hover {
   width: 100%;
   height: 250px;
   background: linear-gradient(0, #fff 0%, rgba(255,255,255,0) 100%);
-}
-
-#scroll, #webpage, #feed .top-gradient {
-  background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0) 100%);
 }
 
 .caption {
