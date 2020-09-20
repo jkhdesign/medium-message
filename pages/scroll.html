@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../src/style.css" type="text/css">
 </head>
 
-<body style="padding: 1em; overflow-y: hidden">
+<body class="subpage">
   <div class="medium-info">
     <h1 class="medium-title">Scroll</h1>
     <p class="medium-intro">The Scroll is one of the oldest forms of the book, second only to clay tablets. This content type is similar to the <span class="similar">Codex</span> in that its content is static, and like the <span class="similar">Webpage</span> presents content in an uninterrupted continuous flow.</p>
@@ -25,17 +25,21 @@
         <td>Realm</td>
         <td>Physical</td>
       </tr>
-      <tr id="example">
+      <tr>
         <td>Example</td>
-        <td>The Torah</td>
+        <td class="example">
+          <p>Copy of Zhang Xu's Record</p>
+          <div class="image-element">
+            <img src="../src/img/zhangxu.png" />
+          </div>
+        </td>
       </tr>
     </table>
   </div>
   <div class="medium-article">
-    <div class="article-container">
     <div class="top-gradient-container"><div class="top-gradient"></div></div>
     <p class="article-title">The papyrus scroll, (excerpt from <em>The Book</em>)</p>
-    <p class="caption">by Amaranth Borsuk, <a href="http://www.amaranthborsuk.com/publications/the-book/" target="_blank">MIT Press</a></p>
+    <p class="caption">by Amaranth Borsuk <a href="https://mitpress.mit.edu/books/book" target="_blank">MIT Press</a></p>
     <hr />
     <img src="http://www.amaranthborsuk.com/wp-content/uploads/2018/07/99ae27c38c0f10ea699b499cab3602ba.png" />
     <p>While the Sumerians were developing a book from the materials at hand, the Egyptians reached to their own river for a support to writing: papyrus, which only grows in the Nile Valley. Egyptians used the plant widely: for building materials, clothing, and even food. The earliest Egyptian writing appears on stone faces inscribed with hieroglyphics that date from the fourth millennium BCE. Hieroglyphics are sure to be familiar to many readers as a system in which drawings of figures and objects are combined to represent things (pictogram), ideas (ideogram), and sounds (phonogram). Hieroglyphs were inscribed on temple walls and obelisks, providing religious and historical records, but they also appear on potsherds as more ephemeral notes. As the need for documentation increased and Egyptians sought a more portable surface for writing, they developed an ideal material from papyrus: a paper both smooth and flexible that could be sized to the needs of a given document.</p>
@@ -54,9 +58,8 @@
 
     <p>Some scrolls were wound around rods that extended beyond the top and bottom of the roll to facilitate opening and closing. This umbilicus (a term that points to the rollers&rsquo; centrality but also suggests a Cronenbergian connection between the hand at one end of this cord and the text at the other) could act as a weight if allowed to drape over a table&rsquo;s edge, holding the scroll open. Generally, readers would unroll a scroll with the right hand while rolling it with the left, an active process revealing only a column or two at a time, which meant that to read it again one had to rewind it, much like a reel-to-reel, cassette, or VHS tape. This process takes a ceremonial form in Judaism, where the Torah scroll is publicly rewound on a holiday known as Simchat Torah, or &ldquo;rejoicing of the Torah.&rdquo; After the final portion is read, the scroll is paraded around the congregation before being returned to the start so the opening portion can be read as well, symbolizing the cyclical nature of both the year and the text.</p>
 
-    <p>While one might expect parchment to have quickly superseded its more fragile counterpart, scrolls of both kinds existed side by side for centuries, much as tablets and scrolls did. Some scholars attribute this parity to the difficulty of systematizing and scaling its production. Parchment and vellum, its highest-quality exemplar (typically of calfskin), were made by skinning an animal, removing the hair from its pelt, bathing the skin in lime, stretching and drying it slowly, then treating the surface to make it hard and smooth. In addition to requiring utmost care, the process necessitated the slaughter of great quantities of livestock, a costly prospect. Much as in our own technological moment, where print books and e-readers continue to be used despite staunch proclamations in favor of the portability, durability, and cost-effectiveness of one or the other, established systems of production and use take time and resources to change.</p>
+    <p style="margin-bottom: 50%;">While one might expect parchment to have quickly superseded its more fragile counterpart, scrolls of both kinds existed side by side for centuries, much as tablets and scrolls did. Some scholars attribute this parity to the difficulty of systematizing and scaling its production. Parchment and vellum, its highest-quality exemplar (typically of calfskin), were made by skinning an animal, removing the hair from its pelt, bathing the skin in lime, stretching and drying it slowly, then treating the surface to make it hard and smooth. In addition to requiring utmost care, the process necessitated the slaughter of great quantities of livestock, a costly prospect. Much as in our own technological moment, where print books and e-readers continue to be used despite staunch proclamations in favor of the portability, durability, and cost-effectiveness of one or the other, established systems of production and use take time and resources to change.</p>
     <div class="bottom-gradient-container"><div class="bottom-gradient"></div></div>
-  </div>
   </div>
 
 <script>
@@ -73,4 +76,5 @@
 	document.querySelector(".bottom-gradient").style.height = scrollBottom + "px";
   };
 </script>
+<script src="../src/scripts.js"></script>
 </body>
