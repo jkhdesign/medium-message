@@ -77,7 +77,7 @@ a {
 }
 
 a:hover {
-  opacity: 0.5;
+  color: #0057ff;
 }
 
 .similar {
@@ -85,12 +85,6 @@ a:hover {
   color: white;
   border-radius: 500px;
   padding: 0 0.5em;
-  cursor: pointer;
-}
-
-.similar:hover {
-  background-color: gray;
-  color: black;
 }
 
 .article-title {
@@ -298,7 +292,7 @@ iframe {
   }
 }
 
-@media only screen and (max-width: 1000px), (max-height: 800px){
+@media only screen and (max-width: 1150px), (max-height: 800px){
   #no-mobile {
     display: flex;
   }
